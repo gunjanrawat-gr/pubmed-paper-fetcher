@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetch PubMed papers with pharma/biotech authors"
+authors = ["Gunjan Rawat <gunjanrawatrmr@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "get_papers" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.4"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.16.1"
+pytest = "^8.4.1"
+
+[tool.poetry.scripts]
+get-papers-list = "cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
