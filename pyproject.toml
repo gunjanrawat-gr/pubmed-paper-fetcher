@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Fetch PubMed papers with pharma/biotech authors"
 authors = ["Gunjan Rawat <gunjanrawatrmr@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "get_papers" }]
+packages = [{ include = "paperfetcher" }]  # Make sure folder name matches
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -15,10 +15,8 @@ mypy = "^1.16.1"
 pytest = "^8.4.1"
 
 [tool.poetry.scripts]
-get-papers-list = "cli:main"
+paperfetcher = "paperfetcher.cli:main"  # ✅ CLI entry point
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-
